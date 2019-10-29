@@ -1,0 +1,10 @@
+{
+  "name": "Image Processing",
+  "label": "Image Processing",
+  "description": "Provides actions for Image processing Operations.",
+  "group": "",
+  "artifactName": "",
+  "packageVersion": "",
+  "codeVersion": "",
+  "commands": []
+}

@@ -1,0 +1,231 @@
+{
+    "name": "Image Processing",
+    "label": "Image Processing",
+    "description": "Provides actions for Image processing Operations.",
+    "group": "com.automationanywhere",
+    "artifactName": "ImageProcessingPackage",
+    "packageVersion": "1.0.0-20191028-213348",
+    "codeVersion": "1.0.0-20191028-213348",
+    "commands": [
+        {
+            "name": "blur",
+            "label": "Blur",
+            "description": "Blur an image",
+            "nodeLabel": "Blur Image {{imagePath}}",
+            "mainClass": "com.automationanywhere.botcommand.demo.BlurCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "Assign the output to variable",
+            "returnRequired": false,
+            "attributes": [
+                {
+                    "name": "imageInputPath",
+                    "label": "Input Image Path",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "imageOutputPath",
+                    "label": "Output Image Path",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "crop",
+            "label": "Crop",
+            "description": "Crop an existing image",
+            "nodeLabel": "Crop {{imagePath}}",
+            "mainClass": "com.automationanywhere.botcommand.demo.CropCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "Assign the output to variable",
+            "returnRequired": false,
+            "attributes": [
+                {
+                    "name": "x",
+                    "label": "X Coordinate",
+                    "type": "NUMBER",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "y",
+                    "label": "Y Coordinate",
+                    "type": "NUMBER",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "width",
+                    "label": "Width",
+                    "type": "NUMBER",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "height",
+                    "label": "Height",
+                    "type": "NUMBER",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "imageInputPath",
+                    "label": "Input Image Path",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "imageOutputPath",
+                    "label": "Output Image Path",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "desaturate",
+            "label": "Desaturate",
+            "description": "Desaturate an image",
+            "nodeLabel": "Desaturate Image {{imagePath}}",
+            "mainClass": "com.automationanywhere.botcommand.demo.DesaturateCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "Assign the output to variable",
+            "returnRequired": false,
+            "attributes": [
+                {
+                    "name": "factor",
+                    "label": "Saturation Factor",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "imageInputPath",
+                    "label": "Input Image Path",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "imageOutputPath",
+                    "label": "Output Image Path",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "grayscale",
+            "label": "Grayscale",
+            "description": "Grayscale an existing image",
+            "nodeLabel": "Grayscale {{imagePath}}",
+            "mainClass": "com.automationanywhere.botcommand.demo.GrayscaleCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "Assign the output to variable",
+            "returnRequired": false,
+            "attributes": [
+                {
+                    "name": "imageInputPath",
+                    "label": "Input Image Path",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "imageOutputPath",
+                    "label": "Output Image Path",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "sharpen",
+            "label": "Sharpen",
+            "description": "Sharpen an image",
+            "nodeLabel": "Sharpen Image {{imagePath}}",
+            "mainClass": "com.automationanywhere.botcommand.demo.SharpenCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "Assign the output to variable",
+            "returnRequired": false,
+            "attributes": [
+                {
+                    "name": "imageInputPath",
+                    "label": "Input Image Path",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "imageOutputPath",
+                    "label": "Output Image Path",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
