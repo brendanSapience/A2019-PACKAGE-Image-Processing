@@ -20,6 +20,7 @@ import com.automationanywhere.commandsdk.annotations.*;
 import com.automationanywhere.commandsdk.annotations.rules.NotEmpty;
 import com.automationanywhere.commandsdk.i18n.Messages;
 import com.automationanywhere.commandsdk.i18n.MessagesFactory;
+import com.automationanywhere.commandsdk.model.AttributeType;
 import com.automationanywhere.commandsdk.model.DataType;
 
 import static com.automationanywhere.commandsdk.model.AttributeType.NUMBER;
@@ -40,7 +41,7 @@ public class Desaturate {
 
 	@Execute
 	public Value<String> action(
-			@Idx(index = "1", type = TEXT) @Pkg(label = "Saturation Factor", default_value_type = DataType.NUMBER) @NotEmpty Double factor,
+			@Idx(index = "1", type = AttributeType.NUMBER) @Pkg(label = "Saturation Factor", default_value_type = DataType.NUMBER) @NotEmpty Double factor,
 			@Idx(index = "2", type = TEXT) @Pkg(label = "Input Image Path") @NotEmpty String imageInputPath,
 			@Idx(index = "3", type = TEXT) @Pkg(label = "Output Image Path") @NotEmpty String imageOutputPath
 	) {

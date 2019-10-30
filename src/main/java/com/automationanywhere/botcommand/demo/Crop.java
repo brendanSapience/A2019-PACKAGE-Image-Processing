@@ -70,7 +70,7 @@ public class Crop {
 
 		try{
 			fb.toGrayscale();
-			Catalano.Imaging.Filters.Crop c = new Catalano.Imaging.Filters.Crop(x.intValue(),y.intValue(),width.intValue(),height.intValue());
+			Catalano.Imaging.Filters.Crop c = new Catalano.Imaging.Filters.Crop(y.intValue(),x.intValue(),height.intValue(),width.intValue());
 			c.applyInPlace(fb);
 			fb.saveAsJPG(imageOutputPath);
 		}catch(Exception e){

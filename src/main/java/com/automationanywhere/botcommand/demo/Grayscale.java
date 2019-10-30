@@ -37,8 +37,9 @@ public class Grayscale {
 	private static final Messages MESSAGES = MessagesFactory.getMessages("com.automationanywhere.botcommand.demo.messages");
 	
 	@Execute
-	public Value<String> action(@Idx(index = "1", type = TEXT) @Pkg(label = "Input Image Path", default_value_type = STRING) @NotEmpty String imageInputPath,
-			@Idx(index = "2", type = TEXT) @Pkg(label = "Output Image Path") @NotEmpty String imageOutputPath) {
+	public Value<String> action(
+			@Idx(index = "1", type = TEXT) @Pkg(label = "Input Image Path", default_value_type = STRING) @NotEmpty String imageInputPath,
+			@Idx(index = "2", type = TEXT) @Pkg(label = "Output Image Path", default_value_type = STRING) @NotEmpty String imageOutputPath) {
 		
 		if("".equals(imageInputPath.trim()))
 			throw new BotCommandException(MESSAGES.getString("emptyInputString", "imageInputPath"));
