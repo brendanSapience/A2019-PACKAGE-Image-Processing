@@ -14,8 +14,11 @@ public class CropTest {
     public Object[][] dataTobeTested(){
 
         return new Object[][]{
-                {5,5,20,20,"c:\\feedback.png","c:\\feedback_ct1.png", ""},
-                {5,5,60,60,"c:\\feedback.png","c:\\feedback_ct2.png", ""}
+                // X is vertical Axis, Y is Horizontal!!!
+                {1,20,10,79,"c:\\feedback.png","c:\\feedback_ct1.png", ""},
+                {10,1,10,70,"c:\\feedback.png","c:\\feedback_ct2.png", ""},
+                {0,0,395,80,"c:\\feedback.png","c:\\feedback_test_out.png", ""}
+
         };
     }
 

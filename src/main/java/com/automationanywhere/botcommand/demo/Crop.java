@@ -68,9 +68,37 @@ public class Crop {
 		//imageInputPath -> imageOutputPath
 		FastBitmap fb = new FastBitmap(imageInputPath);
 
+		// X is vertical Axis, Y is Horizontal!!!
 		try{
 			fb.toGrayscale();
-			Catalano.Imaging.Filters.Crop c = new Catalano.Imaging.Filters.Crop(y.intValue(),x.intValue(),height.intValue(),width.intValue());
+			int ImageHeight = fb.getHeight();
+			int ImageWidth = fb.getWidth();
+
+			int cropHeight = height.intValue();
+			int cropWidth = width.intValue();
+			int cropX = x.intValue();
+			int cropY = y.intValue();
+
+			int cropYMax = cropY+cropWidth;
+			int cropXMax = cropX+cropHeight;
+
+			//System.out.println("DEBUG Image: "+imageInputPath);
+			//System.out.println("DEBUG Image Size: "+ImageWidth + ":"+ImageHeight);
+
+			//System.out.println("DEBUG Crop Area BEFORE [Xmin:Ymin-Xmax:Ymax|Width:Height]: "+cropX+":"+cropY+"-"+cropXMax + ":"+cropYMax+"|"+cropWidth+":"+cropHeight+"]");
+
+			if((cropHeight + cropX) >= ImageHeight) cropHeight = ImageHeight - cropX - 1;
+			if((cropWidth + cropY) >= ImageWidth) cropWidth = ImageWidth - cropY - 1;
+
+			cropYMax = cropY+cropWidth;
+			cropXMax = cropX+cropHeight;
+
+			//System.out.println("DEBUG Crop Area AFTER [Xmin:Ymin-Xmax:Ymax|Width:Height]: "+cropX+":"+cropY+"-"+cropXMax + ":"+cropYMax+"|"+cropWidth+":"+cropHeight+"]");
+
+			//System.out.println("DEBUG Crop Area AFTER [X:Y - Width:Height]: "+cropX+":"+cropY+" - "+cropWidth + ":"+cropHeight);
+
+			Catalano.Imaging.Filters.Crop c = new Catalano.Imaging.Filters.Crop(cropX,cropY,cropWidth,cropHeight);
+
 			c.applyInPlace(fb);
 			fb.saveAsJPG(imageOutputPath);
 		}catch(Exception e){

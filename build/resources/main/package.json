@@ -4,8 +4,8 @@
     "description": "Provides actions for Image processing Operations.",
     "group": "com.automationanywhere",
     "artifactName": "ImageProcessingPackage",
-    "packageVersion": "1.0.0-20191028-213348",
-    "codeVersion": "1.0.0-20191028-213348",
+    "packageVersion": "1.0.0-20191106-155112",
+    "codeVersion": "1.0.0-20191106-155112",
     "commands": [
         {
             "name": "blur",
@@ -130,7 +130,7 @@
                 {
                     "name": "factor",
                     "label": "Saturation Factor",
-                    "type": "TEXT",
+                    "type": "NUMBER",
                     "rules": [
                         {
                             "name": "NOT_EMPTY"
